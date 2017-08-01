@@ -3,7 +3,7 @@ import yaml
 from django.conf.urls import url
 
 
-def create_view(url_settings, view_callback):
+def _create_view(url_settings, view_callback):
     """
     Create a view function to execute the callback function with the
     url_settings
@@ -15,7 +15,7 @@ def create_view(url_settings, view_callback):
     return url_view
 
 
-def load_views_from_file(yaml_filepath, view_callback):
+def create_views_from_file(yaml_filepath, view_callback):
     """
     Givan a YAML file mapping URL paths to values, e.g.:
 
@@ -23,7 +23,9 @@ def load_views_from_file(yaml_filepath, view_callback):
         path/two: {"another": "value"}
 
     Create a Django URL pattern from each value, so that when that path
-    is requested, self.handle_url_path is run, passing the mapped value.
+    is requested, view_callback is run, passing the mapped value.
+
+    Returns a list of Django urlpatterns.
     """
 
     urlpatterns = []
@@ -35,8 +37,9 @@ def load_views_from_file(yaml_filepath, view_callback):
                 urlpatterns.append(
                     url(
                         r'^{0}$'.format(url_path),
-                        create_view(url_settings, view_callback)
+                        _create_view(url_settings, view_callback)
                     )
                 )
 
     return urlpatterns
+
