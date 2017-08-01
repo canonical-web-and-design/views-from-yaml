@@ -1,0 +1,2 @@
+v0.1.0, 2017-08-01 -- Initial module creation
+v0.1.1, 2017-08-01 -- pkgutil-style namespaces; Django >= 1.7
