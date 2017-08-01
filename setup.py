@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='canonicalwebteam.views-from-yaml',
-    version='0.1.2',
+    version='0.2.0',
     author='Canonical webteam',
     author_email='robin+pypi@canonical.com',
     url='https://github.com/canonical-webteam/views-from-yaml',
