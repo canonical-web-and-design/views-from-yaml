@@ -9,7 +9,7 @@ def _create_view(url_settings, view_callback):
     url_settings
     """
 
-    def url_view(request):
+    def url_view(request, *args, **kwargs):
         return view_callback(request, url_settings)
 
     return url_view
@@ -42,4 +42,3 @@ def create_views_from_file(yaml_filepath, view_callback):
                 )
 
     return urlpatterns
-
