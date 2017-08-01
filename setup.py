@@ -16,7 +16,7 @@ setup(
     ),
     long_description=open('README.rst').read(),
     install_requires=[
-        'Django==1.7'
+        'Django==1.3'
     ],
 )
 
