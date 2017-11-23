@@ -10,7 +10,7 @@ def _create_view(url_settings, view_callback):
     """
 
     def url_view(request, *args, **kwargs):
-        return view_callback(request, url_settings)
+        return view_callback(request, url_settings, *args, **kwargs)
 
     return url_view
 

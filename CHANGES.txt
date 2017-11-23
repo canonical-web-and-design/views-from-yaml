@@ -4,3 +4,4 @@ v0.1.2, 2017-08-01 -- Change minimum Django to 1.3 (to match django yaml redirec
 v0.2.0, 2017-08-01 -- Rename kew function to "create_views_from_file"
 v0.2.1, 2017-08-01 -- Fix dependencies in setup.py
 v0.2.2, 2017-08-01 -- Make created views more resilient to erroneous options
+v0.2.2, 2017-11-22 -- Pass through kwargs to the callback function
