@@ -1,3 +1,9 @@
+**Deprecated**
+
+This module has been moved into [canonicalwebteam.yaml-responses](https://github.com/canonical-webteam/yaml-responses), and will no longer be maintained. You should now import the relevant functions from that module instead.
+
+---
+
 A helper function for creating views from a YAML file of URL paths
 ==================================================================
 
